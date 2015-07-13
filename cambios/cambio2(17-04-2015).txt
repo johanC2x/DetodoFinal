@@ -1,0 +1,45 @@
+div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form role="form" action="registroUsuario.php" method="POST">
+                                        <fieldset>
+                                            <legend>Registrar Cuenta</legend>
+                                              <div class="form-group" style="width:350px;" >
+                                                <input type="text" class="form-control" id="txtUser"
+                                                           placeholder="Introduce tu Usuario" name="txtUser">
+                                              </div>
+                                              <div class="form-group" style="width:350px;"> 
+                                                <input type="password" class="form-control" id="txtPass"  
+                                                            placeholder="Introduce tu clave" name="txtPass">
+                                              </div>
+                                              <div class="form-group" style="width:350px;">
+                                                <!--<label for="ejemplo_email_1" style="font-family:Open Sans,lucida grande,Segoe UI,arial,verdana,lucida sans unicode,tahoma,sans-serif;color:" >Usuario</label>-->
+                                                <input type="text" class="form-control" id="txtNombre" 
+                                                       placeholder="Introduce tu Nombre" name="txtNombre">
+                                              </div> 
+                                              <div class="form-group" style="width:350px;">
+                                                <!--<label for="ejemplo_email_1" style="font-family:Open Sans,lucida grande,Segoe UI,arial,verdana,lucida sans unicode,tahoma,sans-serif;color:" >Usuario</label>-->
+                                                <input type="text" class="form-control" id="txtApePat"
+                                                       placeholder="Introduce tu Apellido Paterno" name="txtApePat">
+                                              </div>
+                                              <div class="form-group" style="width:350px;">
+                                                <!--<label for="ejemplo_email_1" style="font-family:Open Sans,lucida grande,Segoe UI,arial,verdana,lucida sans unicode,tahoma,sans-serif;color:" >Usuario</label>-->
+                                                <input type="text" class="form-control" id="txtApeMat"
+                                                       placeholder="Introduce tu Apellido Materno" name="txtApeMat">
+                                              </div>
+                                              <div class="form-group" style="width:350px;">
+                                                <!--<label for="ejemplo_email_1" style="font-family:Open Sans,lucida grande,Segoe UI,arial,verdana,lucida sans unicode,tahoma,sans-serif;color:" >Usuario</label>-->
+                                                <input type="text" class="form-control" id="txtEdad" 
+                                                       placeholder="Introduce tu Edad" name="txtEdad">
+                                              </div> 
+                                              <div class="form-group" style="width:350px;"> 
+                                                <!--<label for="ejemplo_email_1" style="font-family:Open Sans,lucida grande,Segoe UI,arial,verdana,lucida sans unicode,tahoma,sans-serif;color:" >Usuario</label>-->
+                                                <input type="text" class="form-control" id="txtDireccion" 
+                                                       placeholder="Introduce tu Direccion" name="txtDireccion">
+                                              </div>
+                                              <button type="submit" class="btn btn-primary">Ingresar</button>
+                                        </fieldset>
+                                     </form>
+                                </div>
+                            </div>
+                        </div>

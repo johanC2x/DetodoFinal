@@ -1,0 +1,164 @@
+Cambios: PanelControl
+<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="full-width.html">Full Width Page</a>
+                            </li>
+                            <li>
+                                <a href="sidebar.html">Sidebar Page</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="404.html">404</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">Pricing Table</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="blog-home-1.html">Blog Home 1</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">Blog Home 2</a>
+                            </li>
+                            <li>
+                                <a href="blog-post.html">Blog Post</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+
+
+
+
+
+                            <li>
+                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                            </li>
+
+
+
+<div class="container">
+	<div class="row">
+	    <div class="col-md-12" style="margin:0 auto;">
+	    	<table style="float:right">
+				<tr>
+					<td style="padding-right:30px;">
+						<center>
+							<img src="img/bs_3.jpeg" alt="usuario" class="img-thumbnail" 
+				 				 style="width:50px;height:50px;" />
+						</center>
+					</td>
+					<td style="padding-right:10px;"> 
+						<span style="color:red;float:right;padding-right:20px;">En Sesión: <?php echo $_SESSION['nickname'] ?></span>
+					</td>
+				</tr>
+			</table>
+	    </div>
+	</div>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<center>
+				<table class="table" style="width:1100px;border:1px;">
+	  				<tr>
+	  					<td style="width:100px"><center><img src="img/bs_4.jpeg" alt="logo" style="float:left" /></center></td>
+	  					<td style="width:160px">
+		  					<center>
+		  						<p style="color:red;padding-top:12px;font-size:20px">DetoDo</p>
+		  					</center>	
+	  					</td>
+	  					<td></td>
+	  					<td></td>
+	  					<td></td>
+	  					<td></td>
+	  					<td style="width:160px"> 
+		  					<center>
+		  						<img src="img/bs_5.jpeg" alt="logo" style="float:right;width:50px;height:50px;" />
+		  					</center>
+	  					</td>
+	  					<td style="width:160px">
+	  						<center>
+		  						<img src="img/bs_6.jpeg" alt="logo" style="float:right;width:50px;height:50px;" />
+		  					</center>
+	  					</td>
+	  				</tr>
+				</table>
+			</center>	
+		</div>
+	</div>
+</div>
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+formulario de control:
+
+<table style="width:500px">
+											<tr>
+												<td style="padding:20px"> 
+													<label class="control-label" for="filebutton">Elegir Archivo</label> 
+												</td>
+												<td style="width:360px">
+													<div class="controls">
+									    				<input id="input-id" type="file" class="file" data-preview-file-type="text">
+									  				</div>
+												</td>
+											</tr>
+										</table>
+
+
+upload:
+
+
+<div class="container">
+	<div class="row">
+	    <div class="col-md-12" style="margin:0 auto;">   
+			<form role="form" action="validar.php" method="POST">
+				<div class="control-group" style="width:350px">
+				<table style="width:600px">
+					<tr>
+						<td style="width:100px">
+							<label class="control-label" for="filebutton">Elegir Archivo</label>
+						</td>
+						<td style="width:450px">
+							<div class="controls">
+			    				<input id="input-id" type="file" class="file" data-preview-file-type="text">
+			  				</div>
+						</td>
+					</tr>
+				</table>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+

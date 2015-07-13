@@ -1,0 +1,49 @@
+<!--Modal Servicio_7-->
+		<div class="modal fade" id="popServicio7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+		        <h4 class="modal-title" id="myModalLabel">
+		        	Info Servicio_7
+		        </h4>
+		      </div>
+		      <div id="nuevaAventura" class="modal-body">
+				<div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Servicio Siete</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+              </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>       
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+<!--<label for="ejemplo_email_1" style="font-family:Open Sans,lucida grande,Segoe UI,arial,verdana,lucida sans unicode,tahoma,sans-serif;color:" >Usuario</label>-->
+                                <input type="text" class="form-control" id="txtUser"
+                                       placeholder="Introduce tu Usuario" name="txtUser">
+                                
+
+
+
+while($resultUsuario=mysql_fetch_array($usuario)) {
+		if ($resultUsuario['idusuario'] == null) {
+			echo"<script type=\"text/javascript\">alert(\"Fallo la Operación\");</script>";
+			echo"<script type=\"text/javascript\">window.location.href='index.php';</script>";
+		}else{
+			echo"<script type=\"text/javascript\">alert(\"Operacion Correcta\");</script>";
+			echo"<script type=\"text/javascript\">window.location.href='index.php';</script>";
+		}
+	}

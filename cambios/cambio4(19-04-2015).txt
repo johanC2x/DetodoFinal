@@ -1,0 +1,81 @@
+<!-- ====================================| popUpPost |================================================== -->
+        <!--Modal Servicio_7-->
+        <div class="modal fade" id="popPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+          <div class="modal-dialog" style="width:800px;height:300px;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Nuevo Post
+                </h4>
+              </div>
+              <div id="nuevaAventura" class="modal-body" >
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-comment fa-stack-1x fa-inverse"></i>
+                              <!--<i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>-->
+                        </span> 
+                    </div>
+                    <div class="media-body" > 
+                        <div class="row">
+                            <div class="col-md-12" style="margin:0 auto;"> 
+                                <form role="form" action="mantFile.php" method="POST" enctype="multipart/form-data">
+                                    <div class="control-group">
+                                    <input type="hidden" value="<?php echo $_SESSION['idusuario']?>" name="txtIdUsuario"/>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group" style="width:200px;"> 
+                                                        <label for="txtTituloPost">Nombre</label>
+                                                         <input type="text" class="form-control" id="txtTituloPost" 
+                                                                placeholder="Ingrese Titulo" name="txtTituloPost">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group" style="width:200px;">
+                                                                <label class="control-label" for="txtFile">Tipo Post</label>
+                                                                <select class="form-control" id="sel1" name="cboTipoArchivo">
+                                                                    <option>Seleccionar</option> 
+                                                                        <?php
+                                                                            while($resultCodigoPost=mysql_fetch_array($codigoPost)) {
+                                                                        ?>
+                                                                    <option value="<?php echo $resultCodigo['idcodigo']; ?>">
+                                                                        <?php echo $resultCodigoPost['descripcion']; ?>
+                                                                    </option>
+                                                                        <?php
+                                                                            }
+                                                                        ?>
+                                                                </select>    
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group" style="width:650px;"> 
+                                                        <label for="txtDesPost">Contenido</label>
+                                                        <textarea id="descripcion" class="descripcion" name="descripcion" rows="400" cols="400" ></textarea>
+                                                        <script type="text/javascript">
+                                                            CKEDITOR.replace( 'descripcion' );
+                                                        </script>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <button type="submit" class="btn btn-primary">Subir</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>       
+              </div>
+            </div>
+          </div>
+        </div>

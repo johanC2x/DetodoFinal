@@ -1,0 +1,19 @@
+foreach ($resultFile as $file){
+   			/*echo '<a><img class="img-responsive img-hover" src="'.$file['descripcion'].'"/></a><br/>';*/
+			echo "Cargo imagen";
+			/*echo "<a><img class='img-responsive img-hover' src='".$file['descripcion']."'/></a><br/>";*/
+   			/*echo '<img src="'.$file['descripcion'].'"/>';*/
+   		}
+
+for ($i=0;$i<sizeof($resultFile); $i++) {
+   			echo '<img class="img-responsive img-hover" src="'.$resultFile['descripcion'].'"/>'; 
+   			/*echo '<a><img class="img-responsive img-hover" src="'.$resultFile['descripcion'].'"/></a><br/>';*/
+			echo "Cargo imagen";
+   		}
+
+if($_POST){
+		foreach ($resultFile as $file){
+   			echo '<img class="img-responsive img-hover" src="'.$file['descripcion'].'"/>'; 
+			echo "Cargo imagen";
+   		}
+	}
