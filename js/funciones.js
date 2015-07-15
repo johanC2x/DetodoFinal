@@ -159,7 +159,12 @@ function modificarCuenta(){
 			var usu = $.parseJSON(msg);
 			if(usu.length>0){ 
 				for(var i=0;i<usu.length;i++){
+<<<<<<< HEAD
 					console.log(usu[i].mail);  
+=======
+					console.log(usu[i].mail);
+					if(usu[i].mail!=""){
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
 						html += "<form role='form'>";
 							html += "<fieldset>";
 								html += "<legend>Datos de Usuario</legend>";
@@ -168,18 +173,34 @@ function modificarCuenta(){
 										html += "<td style='padding:5px;'><label>Nombre de Usuario: </label></td>";
 										html += "<td><input id='txtUser' type='text' class='form-control' value='"+usu[i].nombre+" "+usu[i].apepat+" "+usu[i].apemat+"' readonly='true'></td>";
 										html += "<td><input id='txtIdUser' type='hidden' class='form-control' value='"+usu[i].idusuario+"'></td>";
+<<<<<<< HEAD
 									html += "</tr>";  
+=======
+									html += "</tr>"; 
+									html += "<tr>";
+										html += "<td style='padding:5px;'><label>Correo de USuario: </label></td>";
+										html += "<td><input id='txtNick' type='text' class='form-control' value='"+usu[i].mail+"' readonly='true'></td>";
+									html += "</tr>";
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
 									html += "<tr>";
 										html += "<td style='padding:5px;'><label>Nick de USuario: </label></td>";
 										html += "<td><input id='txtNick' type='text' class='form-control' value='"+usu[i].nickname+"' readonly='true'></td>";
 									html += "</tr>";
 									html += "<tr>";
 										html += "<td style='padding:5px;'><label>Ingresar Contraseña: </label></td>";
+<<<<<<< HEAD
 										html += "<td><input id='txtPassw' type='text' class='form-control' onkeyup='validarPass()'></td>";
 									html += "</tr>";
 									html += "<tr>";
 										html += "<td style='padding:5px;'><label>Confirmar Contraseña: </label></td>";
 										html += "<td><input id='txtPasss' type='text' class='form-control' onkeyup='validarPasss()'><span id='resPass' style='color:red;'></span></td>";
+=======
+										html += "<td><input id='txtPass' type='text' class='form-control'></td>";
+									html += "</tr>";
+									html += "<tr>";
+										html += "<td style='padding:5px;'><label>Confirmar Contraseña: </label></td>";
+										html += "<td><input id='txtPasss' type='text' class='form-control'></td>";
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
 									html += "</tr>"; 
 								html += "</table>"; 
 							html += "</fieldset>";
@@ -189,18 +210,67 @@ function modificarCuenta(){
 										html += "<label>Enviar Confirmacion: </label>";
 									html += "</td>";								
 									html += "<td>";
+<<<<<<< HEAD
 										html += "<label class='checkbox-inline'><input id='ck1' type='checkbox' value='1' onclick='validarCk1()'>Correo</label>";
 										html += "<label class='checkbox-inline'><input id='ck2' type='checkbox' value='2' onclick='validarCk2()'>Celular</label>";
 									html += "</td>";
 								html += "</tr>";
 							html += "</table>"; 
 				        html += "</form>";  
+=======
+										html += "<label class='checkbox-inline'><input type='checkbox' value=''>Correo</label>";
+										html += "<label class='checkbox-inline'><input type='checkbox' value=''>Celular</label>";
+									html += "</td>";
+								html += "</tr>";
+							html += "</table>"; 
+				        html += "</form>"; 
+					}else{
+						if(usu[i].mail==""){
+							html += "<form role='form'>";
+								html += "<fieldset>";
+									html += "<legend>Datos de Usuario</legend>";
+									html += "<table>";
+										html += "<tr>";
+											html += "<td style='padding:5px;'><label>Nombre de Usuario: </label></td>";
+											html += "<td><input id='txtUser' type='text' class='form-control' value='"+usu[i].nombre+" "+usu[i].apepat+" "+usu[i].apemat+"' readonly='true'></td>";
+											html += "<td><input id='txtIdUser' type='hidden' class='form-control' value='"+usu[i].idusuario+"'></td>";
+										html += "</tr>"; 
+										html += "<tr>";
+											html += "<td style='padding:5px;'><label>Nick de USuario: </label></td>";
+											html += "<td><input id='txtNick' type='text' class='form-control' value='"+usu[i].nickname+"' readonly='true'></td>";
+										html += "</tr>";
+										html += "<tr>";
+											html += "<td style='padding:5px;'><label>Ingresar Contraseña: </label></td>";
+											html += "<td><input id='txtPass' type='text' class='form-control'></td>";
+										html += "</tr>";
+										html += "<tr>";
+											html += "<td style='padding:5px;'><label>Confirmar Contraseña: </label></td>";
+											html += "<td><input id='txtPasss' type='text' class='form-control'></td>";
+										html += "</tr>"; 
+									html += "</table>"; 
+								html += "</fieldset>";
+								html += "<table>";
+									html += "<tr>";
+										html += "<td style='padding:5px;'>";
+											html += "<label>Enviar Confirmacion: </label>";
+										html += "</td>";								
+										html += "<td>";
+											html += "<label class='checkbox-inline'><input type='checkbox' value=''>Correo</label>";
+											html += "<label class='checkbox-inline'><input type='checkbox' value=''>Celular</label>";
+										html += "</td>";
+									html += "</tr>";
+								html += "</table>"; 
+					        html += "</form>"; 
+						} 
+					}  
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
 				} 
 				$("#response").html(html);  
                 $("#popServicio9").modal("show");
 			}
 			console.log(msg);
 		}
+<<<<<<< HEAD
 	}); 
 }
 
@@ -276,4 +346,33 @@ function validarCk2(){
 		ck2 = $('#ck2').val();
 		console.log($('#ck2').val());
 	} 
+=======
+	});
+	/*
+	$.post(
+			"recuperarUsuario.php",
+			{correo:correo,nombreFull:nombreFull},
+			function(data){
+				var usu = $.parseJSON(data);
+				if(usu.length>0){ 
+					html += "<div class='panel panel-default'>";
+						html += "<div class='panel-heading'>";
+							html += "Recuperar Cuenta";
+						html += "<div>";
+						html += "<div class='panel-body'>";
+							for(var i=0;i<usu.length;i++){
+								html += "<form role='form'>"; 
+									html += "<label>"+usu[i].nombre+"</label>";
+			                    html += "</form>";
+							} 
+						html += "<div>"; 
+                    html += "</div>";
+                    $("#response").html(html);
+                    $("#popServicio9").modal("show");
+				}
+				console.log(data);
+			}
+		);  
+	*/
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
 }

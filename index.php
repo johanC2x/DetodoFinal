@@ -213,7 +213,11 @@
         </div>
       </div>
       <div class="modal-footer">
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary" id="btnRecUsu" onclick="modificarCuenta()">Buscar</button>
+=======
+        <button type="button" class="btn btn-primary" id="btnRecUsu" onclick="modificarCuenta()" >Buscar</button>
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
         <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>       
       </div>
     </div>
@@ -251,7 +255,11 @@
         </div>
       </div>
       <div class="modal-footer">
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary" id="btnRecUsu" onclick="modificarContra()" >Modificar</button>
+=======
+        <button type="button" class="btn btn-primary" id="btnRecUsu" onclick="modificarContraseña()" >Modificar</button>
+>>>>>>> 9b7ffcba8d9d49ba275b4890518fb88a28eb0e1d
         <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>       
       </div>
     </div>
