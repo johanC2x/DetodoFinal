@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DetoDo.com</title>
+    <title>DetoDo.com</title> 
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,9 +23,9 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript">
-    </script>
+    <![endif]--> 
+    <!--script type="text/javascript" src="js/jquery.js" ></script-->
+    
     <style type="text/css">
       body{
           background-image: url('img/bs_2.jpg');
@@ -60,6 +60,7 @@
                   </fieldset>
                 </form>
                 <p>Si no tiene cuenta hacer click <a href="#" data-toggle="modal" data-target="#popServicio7" style="color:red;" >aqui</a></p>
+                <p>Olvidaste tu contraseña click <a href="#" data-toggle="modal" data-target="#popServicio8" style="color:red;" >aqui</a></p>
             </div>
         </div>  
         <div class="col-md-3">
@@ -152,18 +153,111 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>       
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>       
               </div>
             </div>
           </div>
         </div>
         
-
+<!--===================================================PopUp8============================================== -->
         
+<div class="modal fade" id="popServicio8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <h4 class="modal-title" id="myModalLabel">
+            
+        </h4>
+      </div>
+      <div id="nuevaAventura" class="modal-body">
+        <div class="media" >
+            <div class="pull-left">
+                <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                       <i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
+                </span> 
+            </div>
+            <div class="media-body">
+                <div class="container">
+                     <div class="row">
+                        <div class="col-md-12"> 
+                            <form role="form">
+                              <fieldset>
+                                <legend>Recupera Cuenta</legend> 
+                                  <table>
+                                    <tr>
+                                      <td></td>
+                                      <td>
+                                        <p>Correo electrónico o nombre completo</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span class="fa-stack fa-2x">
+                                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                              <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                      </td>
+                                      <td>
+                                        <input id="txtRecUsu" type="text" class="form-control" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                              </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnRecUsu" onclick="modificarCuenta()">Buscar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>       
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- ================================================================================================ -->
 
-
-
-
+<!-- ===========================================PopUp9===================================================== -->
+<div class="modal fade" id="popServicio9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        <h4 class="modal-title" id="myModalLabel">
+            
+        </h4>
+      </div>
+      <div id="nuevaAventura" class="modal-body">
+        <div class="media" >
+            <div class="pull-left">
+                <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                       <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                </span> 
+            </div>
+            <div class="media-body">
+                <div class="container">
+                     <div class="row">
+                        <div class="col-md-12"> 
+                            <div id="response" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnRecUsu" onclick="modificarContra()" >Modificar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================================================================================================ -->  
 
 <!-- ====================================| JQUERY |================================================== -->
  	<!-- jQuery -->
@@ -171,6 +265,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/funciones.js" ></script>
 <!-- ====================================================================================== -->
 </body>
 </html>
